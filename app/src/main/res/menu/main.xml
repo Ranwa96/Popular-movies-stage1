@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_sort_by"
+
+        android:title="sortBy"
+        app:showAsAction="always">
+        <!-- movies submenu -->
+        <menu>
+            <group
+                android:id="@+id/menu_sort_group"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/action_popular_movies"
+                    android:checked="true"
+                    android:title="most popular" />
+
+                <item
+                    android:id="@+id/action_top_rated"
+                    android:title="top rated" />
+            </group>
+        </menu>
+    </item>
+
+</menu>
