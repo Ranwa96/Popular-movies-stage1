@@ -120,33 +120,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        this.item = item;
+        
 
-        int id = item.getItemId();
-
-        if (id == R.id.action_sort_by) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            final SharedPreferences.Editor editor = preferences.edit();
-            int selected = 0;
-            sort_type = preferences.getString("sort_type", "popular");
-            if (sort_type.equals("popular")) {
-                selected = 0;
-            } else if (sort_type.equals("top_rated")) {
-                selected = 1;
-            }
-            builder.setTitle("Select Option");
-            builder.setSingleChoiceItems(R.array.sort_types, selected,
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            if (which == 0)
-                                editor.putString("sort_type", "popular");
-                            else if (which == 1)
-                                editor.putString("sort_type", "top_rated");
-                        }
-                    });
-
-        }
+      
         return true;
     }
 }
